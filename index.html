@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="imagenes/IMG-ico.ico">
+  <title>SALUDDIVINA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .header {
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      color: #1f2937;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      color: #4b5563;
+      margin-top: 10px;
+    }
+
+    .logo {
+      margin: 20px 0;
+    }
+
+    .cta-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .cta-container {
+      background: white;
+      border: 1px solid #d1d5db;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      max-width: 500px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .cta-btn {
+      background-color: #2563eb;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .cta-btn:hover {
+      background-color: #1e40af;
+    }
+
+    .form {
+      width: 100%;
+    }
+
+    .form label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #1f2937;
+    }
+
+    .form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #d1d5db;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .form button {
+      width: 100%;
+      background-color: #10b981;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .form button:hover {
+      background-color: #059669;
+    }
+
+    .testimonials {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    .testimonials img {
+      height: 30px;
+      margin: 0 10px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>¿Quieres tener salud divina?</h1>
+      <p>Aqui encontraras la posibilidad de sanar tu cuerpo con productos totalmente naturales probados cientificamente.
+      </p>
+    </div>
+    <div class="logo">
+      <img src="imagenes/Logo.jpg" style="height: 100px;" alt="Logo">
+    </div>
+    <div class="cta-section">
+      <div class="cta-container">
+        <div class="form">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" placeholder="Ingresa tu nombre" required>
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" placeholder="Ingresa tu correo" required>
+          <label for="phone">Número de teléfono:</label>
+          <input type="tel" id="phone" placeholder="Ingresa tu número de teléfono" required>
+          <button id="sendToWhatsApp">Enviar</button>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials">
+      <p>Estamos en los siguientes países:</p>
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+          <div style="text-align: center;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg" alt="Bandera de Chile" width="50">
+              <p>Chile</p>
+          </div>
+          <div style="text-align: center;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg" alt="Bandera de Perú" width="50">
+              <p>Perú</p>
+          </div>
+          <div style="text-align: center;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" alt="Bandera de México" width="50">
+              <p>México</p>
+          </div>
+          <div style="text-align: center;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg" alt="Bandera de Colombia" width="50">
+              <p>Colombia</p>
+          </div>
+          <div style="text-align: center;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Bolivia.svg" alt="Bandera de Bolivia" width="50">
+              <p>Bolivia</p>
+          </div>
+          <div style="text-align: center;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg" alt="Bandera de Ecuador" width="50">
+              <p>Ecuador</p>
+          </div>
+          <div style="text-align: center;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Flag_of_Guatemala.svg" alt="Bandera de Guatemala" width="50">
+              <p>Guatemala</p>
+          </div>
+          <div style="text-align: center;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Flag_of_El_Salvador.svg" alt="Bandera de El Salvador" width="50">
+              <p>El Salvador</p>
+          </div>
+          <div style="text-align: center;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Flag_of_Panama.svg" alt="Bandera de Panamá" width="50">
+              <p>Panamá</p>
+          </div>
+      </div>
+  </div>
+  </div>
+
+  <script>
+    document.getElementById('sendToWhatsApp').addEventListener('click', function () {
+      // Obtén los datos del formulario
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+
+      // Número de teléfono de WhatsApp (en formato internacional sin símbolos)
+      const phoneNumber = '+573244473967'; // Cambia este número
+
+      // Verifica que los campos no estén vacíos
+      if (!name || !email || !phone) {
+        alert('Por favor, completa todos los campos antes de enviar.');
+        return;
+      }
+
+      // Construye el mensaje
+      const message = `Hola, mi nombre es ${encodeURIComponent(name)}, mi correo es ${encodeURIComponent(email)} y mi número de teléfono es ${encodeURIComponent(phone)}. Me interesa la información de los productos.`;
+
+      // Redirige al enlace de WhatsApp
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.open(whatsappURL, '_blank');
+    });
+  </script>
+</body>
+
+</html>
