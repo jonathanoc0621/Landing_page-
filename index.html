@@ -176,28 +176,96 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
     <div class="form">
       <label for="name">Nombre:</label>
       <input type="text" id="name" placeholder="Ingresa tu nombre" required>
+      
       <label for="email">Correo electrónico:</label>
       <input type="email" id="email" placeholder="Ingresa tu correo" required>
+
       <label for="phone">Número de teléfono:</label>
       <div class="phone-input">
-        <select id="countryCode">
-          <option value="+1">🇺🇸 Estados Unidos +1</option>
-          <option value="+56">🇨🇱 Chile +56</option>
-          <option value="+51">🇵🇪 Perú +51</option>
-          <option value="+52">🇲🇽 México +52</option>
-          <option value="+57">🇨🇴 Colombia +57</option>
-          <option value="+591">🇧🇴 Bolivia +591</option>
-          <option value="+593">🇪🇨 Ecuador +593</option>
-          <option value="+502">🇬🇹 Guatemala +502</option>
-          <option value="+503">🇸🇻 El Salvador +503</option>
-          <option value="+507">🇵🇦 Panamá +507</option>
-        </select>
-        <input type="tel" id="phone" placeholder="Ingresa tu número de teléfono" required>
+        <div class="flag-box">
+          🇵🇪
+        </div>
+        <input type="tel" id="phone" placeholder="+51" required>
       </div>
+
       <button id="sendToEmail">Enviar</button>
     </div>
   </div>
 </div>
+
+<style>
+  .cta-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .cta-container {
+    width: 300px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form label {
+    margin-bottom: 5px;
+  }
+
+  .form input {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .phone-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .flag-box {
+    background-color: white;
+    padding: 0 10px;
+    border-right: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .phone-input input {
+    flex: 1;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+    height: 100%;
+  }
+
+  button {
+    height: 40px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+
 
     <div class="testimonials">
       <p>Estamos en los siguientes países:</p>
