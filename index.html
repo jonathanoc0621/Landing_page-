@@ -11,7 +11,7 @@
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+if(!f._fbq)f._fbq=n;n.push=n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
@@ -159,8 +159,22 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
           <label for="email">Correo electrónico:</label>
           <input type="email" id="email" placeholder="Ingresa tu correo" required>
           <label for="phone">Número de teléfono:</label>
-          <input type="tel" id="phone" placeholder="Ingresa tu número de teléfono" required>
-          <button id="sendToWhatsApp">Enviar</button>
+          <div style="display: flex; align-items: center;">
+            <select id="countryCode" style="margin-right: 10px; border: 1px solid #d1d5db; border-radius: 5px; padding: 10px;">
+              <option value="+1">🇺🇸 +1</option>
+              <option value="+56">🇨🇱 +56</option>
+              <option value="+51">🇵🇪 +51</option>
+              <option value="+52">🇲🇽 +52</option>
+              <option value="+57">🇨🇴 +57</option>
+              <option value="+591">🇧🇴 +591</option>
+              <option value="+593">🇪🇨 +593</option>
+              <option value="+502">🇬🇹 +502</option>
+              <option value="+503">🇸🇻 +503</option>
+              <option value="+507">🇵🇦 +507</option>
+            </select>
+            <input type="tel" id="phone" placeholder="Ingresa tu número de teléfono" required>
+          </div>
+          <button id="sendToEmail">Enviar</button>
         </div>
       </div>
     </div>
@@ -168,39 +182,43 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       <p>Estamos en los siguientes países:</p>
       <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
           <div style="text-align: center;">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg" alt="Bandera de Chile" width="50">
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="Bandera de Estados Unidos" width="50"></a>
+              <p>Estados Unidos</p>
+          </div>
+          <div style="text-align: center;">
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg" alt="Bandera de Chile" width="50"></a>
               <p>Chile</p>
           </div>
           <div style="text-align: center;">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg" alt="Bandera de Perú" width="50">
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg" alt="Bandera de Perú" width="50"></a>
               <p>Perú</p>
           </div>
           <div style="text-align: center;">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" alt="Bandera de México" width="50">
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" alt="Bandera de México" width="50"></a>
               <p>México</p>
           </div>
           <div style="text-align: center;">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg" alt="Bandera de Colombia" width="50">
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg" alt="Bandera de Colombia" width="50"></a>
               <p>Colombia</p>
           </div>
           <div style="text-align: center;">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Bolivia.svg" alt="Bandera de Bolivia" width="50">
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Bolivia.svg" alt="Bandera de Bolivia" width="50"></a>
               <p>Bolivia</p>
           </div>
           <div style="text-align: center;">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg" alt="Bandera de Ecuador" width="50">
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg" alt="Bandera de Ecuador" width="50"></a>
               <p>Ecuador</p>
           </div>
           <div style="text-align: center;">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Flag_of_Guatemala.svg" alt="Bandera de Guatemala" width="50">
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Flag_of_Guatemala.svg" alt="Bandera de Guatemala" width="50"></a>
               <p>Guatemala</p>
           </div>
           <div style="text-align: center;">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Flag_of_El_Salvador.svg" alt="Bandera de El Salvador" width="50">
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Flag_of_El_Salvador.svg" alt="Bandera de El Salvador" width="50"></a>
               <p>El Salvador</p>
           </div>
           <div style="text-align: center;">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Flag_of_Panama.svg" alt="Bandera de Panamá" width="50">
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Flag_of_Panama.svg" alt="Bandera de Panamá" width="50"></a>
               <p>Panamá</p>
           </div>
       </div>
@@ -208,14 +226,12 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
   </div>
 
   <script>
-    document.getElementById('sendToWhatsApp').addEventListener('click', function () {
+    document.getElementById('sendToEmail').addEventListener('click', function () {
       // Obtén los datos del formulario
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
+      const countryCode = document.getElementById('countryCode').value;
       const phone = document.getElementById('phone').value;
-
-      // Número de teléfono de WhatsApp (en formato internacional sin símbolos)
-      const phoneNumber = '+573244473967'; // Cambia este número
 
       // Verifica que los campos no estén vacíos
       if (!name || !email || !phone) {
@@ -224,13 +240,13 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       }
 
       // Construye el mensaje
-      const message = `Hola, mi nombre es ${encodeURIComponent(name)}, mi correo es ${encodeURIComponent(email)} y mi número de teléfono es ${encodeURIComponent(phone)}. Me interesa la información de los productos.`;
+      const message = `Hola, mi nombre es ${name}, mi correo es ${email} y mi número de teléfono es ${countryCode} ${phone}. Me interesa la información de los productos.`;
 
-      // Redirige al enlace de WhatsApp
-      const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
-      window.open(whatsappURL, '_blank');
+      // Envia el correo
+      window.location.href = `mailto:info@saluddivina.com?subject=Información de Productos&body=${encodeURIComponent(message)}`;
     });
   </script>
 </body>
 
 </html>
+``` ▋
