@@ -6,24 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="imagenes/IMG-ico.ico">
   <title>SALUDDIVINA</title>
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1320673155625730');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-  
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function() {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1320673155625730');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1" />
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
   <style>
     body {
       margin: 0;
@@ -76,6 +87,21 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       text-align: left;
     }
 
+    .cta-btn {
+      background-color: #2563eb;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .cta-btn:hover {
+      background-color: #1e40af;
+    }
+
     .form {
       width: 100%;
     }
@@ -96,6 +122,30 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       font-size: 1rem;
     }
 
+    .phone-input {
+      display: flex;
+      align-items: center;
+      border: 1px solid #d1d5db;
+      border-radius: 5px;
+      padding: 10px;
+      gap: 10px;
+    }
+
+    .phone-input select {
+      border: none;
+      background: none;
+      padding: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .phone-input input {
+      border: none;
+      width: 100%;
+      padding: 5px;
+      font-size: 1rem;
+    }
+
     .form button {
       width: 100%;
       background-color: #10b981;
@@ -106,33 +156,11 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       font-size: 1rem;
       cursor: pointer;
       transition: background-color 0.3s;
+      margin-top: 15px;
     }
 
     .form button:hover {
       background-color: #059669;
-    }
-
-    .phone-input {
-      display: flex;
-      align-items: center;
-      border: 1px solid #d1d5db;
-      border-radius: 5px;
-      padding: 10px;
-      background-color: white;
-    }
-
-    .phone-input select {
-      border: none;
-      margin-right: 10px;
-      padding: 0;
-      background: none;
-      appearance: none;
-    }
-
-    .phone-input input {
-      border: none;
-      width: 100%;
-      padding: 0;
     }
   </style>
 </head>
@@ -141,7 +169,7 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
   <div class="container">
     <div class="header">
       <h1>¿Quieres tener salud divina?</h1>
-      <p>Aqui encontraras la posibilidad de sanar tu cuerpo con productos totalmente naturales probados cientificamente.
+      <p>Aquí encontrarás la posibilidad de sanar tu cuerpo con productos totalmente naturales probados científicamente.
       </p>
     </div>
     <div class="logo">
@@ -157,7 +185,7 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
           <label for="phone">Número de teléfono:</label>
           <div class="phone-input">
             <select id="countryCode">
-              <option value="+1" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg');">🇺🇸 +1</option>
+              <option value="+1">🇺🇸 +1</option>
               <option value="+56">🇨🇱 +56</option>
               <option value="+51">🇵🇪 +51</option>
               <option value="+52">🇲🇽 +52</option>
@@ -174,25 +202,22 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
         </div>
       </div>
     </div>
+  </div>
 
   <script>
-    document.getElementById('sendToEmail').addEventListener('click', function () {
-      // Obtén los datos del formulario
+    document.getElementById('sendToEmail').addEventListener('click', function() {
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
       const countryCode = document.getElementById('countryCode').value;
       const phone = document.getElementById('phone').value;
 
-      // Verifica que los campos no estén vacíos
       if (!name || !email || !phone) {
         alert('Por favor, completa todos los campos antes de enviar.');
         return;
       }
 
-      // Construye el mensaje
       const message = `Hola, mi nombre es ${name}, mi correo es ${email} y mi número de teléfono es ${countryCode} ${phone}. Me interesa la información de los productos.`;
 
-      // Envia el correo
       window.location.href = `mailto:bybettycd@gmail.com?subject=Información de Productos&body=${encodeURIComponent(message)}`;
     });
   </script>
