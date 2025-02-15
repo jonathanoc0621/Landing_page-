@@ -151,7 +151,11 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       border: none;
       margin-right: 10px;
       padding: 0;
-      max-width: 150px; /* Reduce the width of the select */
+      max-width: 50px; /* Reduce the width of the select when closed */
+    }
+
+    .phone-input select option {
+      max-width: none; /* Ensure the options are full width */
     }
 
     .phone-input input {
@@ -181,16 +185,16 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       <label for="phone">Número de teléfono:</label>
       <div class="phone-input">
         <select id="countryCode">
-          <option value="+1">🇺🇸 Estados Unidos +1</option>
-          <option value="+56">🇨🇱 Chile +56</option>
-          <option value="+51">🇵🇪 Perú +51</option>
-          <option value="+52">🇲🇽 México +52</option>
-          <option value="+57">🇨🇴 Colombia +57</option>
-          <option value="+591">🇧🇴 Bolivia +591</option>
-          <option value="+593">🇪🇨 Ecuador +593</option>
-          <option value="+502">🇬🇹 Guatemala +502</option>
-          <option value="+503">🇸🇻 El Salvador +503</option>
-          <option value="+507">🇵🇦 Panamá +507</option>
+          <option value="+1">🇺🇸 +1</option>
+          <option value="+56">🇨🇱 +56</option>
+          <option value="+51">🇵🇪 +51</option>
+          <option value="+52">🇲🇽 +52</option>
+          <option value="+57">🇨🇴 +57</option>
+          <option value="+591">🇧🇴 +591</option>
+          <option value="+593">🇪🇨 +593</option>
+          <option value="+502">🇬🇹 +502</option>
+          <option value="+503">🇸🇻 +503</option>
+          <option value="+507">🇵🇦 +507</option>
         </select>
         <input type="tel" id="phone" placeholder="Ingresa tu número de teléfono" required>
       </div>
@@ -265,11 +269,31 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       const message = `Hola, mi nombre es ${name}, mi correo es ${email} y mi número de teléfono es ${countryCode} ${phone}. Me interesa la información de los productos.`;
 
       // Envia el correo
-      window.location.href = `mailto:bybettycd@gmail.com?subject=Información de Productos&body=${encodeURIComponent(message)}`;
+      fetch('https://api.email-service.com/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          to: 'bybettycd@gmail.com',
+          subject: 'Información de Productos',
+          body: message
+        })
+      }).then(response => {
+        if (response.ok) {
+          alert('Tu mensaje ha sido enviado exitosamente.');
+        } else {
+          alert('Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.');
+        }
+      }).catch(error => {
+        console.error('Error:', error);
+        alert('Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.');
+      });
     });
   </script>
 </body>
 
 </html>
+
 
 
