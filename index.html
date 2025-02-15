@@ -142,16 +142,14 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
     .phone-input {
       display: flex;
       align-items: center;
-      border: 1px solid #d1d5db;
-      border-radius: 5px;
-      padding: 10px;
       width: calc(100% - 22px); /* Adjusted width to fit the container */
     }
 
     .phone-input select {
-      border: none;
-      margin-right: 10px;
-      padding: 0;
+      border: 1px solid #d1d5db;
+      border-radius: 5px 0 0 5px;
+      margin-right: -1px;
+      padding: 10px;
       max-width: 100px; /* Reduce the width of the select when closed */
     }
 
@@ -161,9 +159,11 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
     }
 
     .phone-input input {
-      border: none;
+      border: 1px solid #d1d5db;
+      border-radius: 0 5px 5px 0;
       width: 100%;
-      padding: 0;
+      padding: 10px;
+      text-align: center;
     }
   </style>
 </head>
