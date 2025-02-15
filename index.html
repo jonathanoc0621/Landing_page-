@@ -266,34 +266,15 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       }
 
       // Construye el mensaje
-      const message = `Hola, mi nombre es ${name}, mi correo es ${email} y mi número de teléfono es ${countryCode} ${phone}. Me interesa la información de los productos.`;
+      const message = `Hola, mi nombre es ${name}, mi correo es ${email} y mi número de teléfono es ${countryCode} ${phone}. Me interesa la información del negocio.`;
 
-      // Envia el correo
-      fetch('https://api.email-service.com/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          to: 'bybettycd@gmail.com',
-          subject: 'Información de Productos',
-          body: message
-        })
-      }).then(response => {
-        if (response.ok) {
-          alert('Tu mensaje ha sido enviado exitosamente.');
-        } else {
-          alert('Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.');
-        }
-      }).catch(error => {
-        console.error('Error:', error);
-        alert('Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.');
-      });
+      // Envía un mensaje de WhatsApp
+      const whatsappUrl = `https://wa.me/573244473967${phone}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
     });
   </script>
 </body>
 
 </html>
-
 
 
