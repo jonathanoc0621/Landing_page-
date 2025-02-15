@@ -76,21 +76,6 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       text-align: left;
     }
 
-    .cta-btn {
-      background-color: #2563eb;
-      color: #fff;
-      padding: 15px 30px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .cta-btn:hover {
-      background-color: #1e40af;
-    }
-
     .form {
       width: 100%;
     }
@@ -127,30 +112,21 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       background-color: #059669;
     }
 
-    .testimonials {
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #6b7280;
-    }
-
-    .testimonials img {
-      height: 30px;
-      margin: 0 10px;
-      opacity: 0.8;
-    }
-    
     .phone-input {
       display: flex;
       align-items: center;
       border: 1px solid #d1d5db;
       border-radius: 5px;
       padding: 10px;
+      background-color: white;
     }
 
     .phone-input select {
       border: none;
       margin-right: 10px;
       padding: 0;
+      background: none;
+      appearance: none;
     }
 
     .phone-input input {
@@ -181,7 +157,7 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
           <label for="phone">Número de teléfono:</label>
           <div class="phone-input">
             <select id="countryCode">
-              <option value="+1">🇺🇸 +1</option>
+              <option value="+1" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg');">🇺🇸 +1</option>
               <option value="+56">🇨🇱 +56</option>
               <option value="+51">🇵🇪 +51</option>
               <option value="+52">🇲🇽 +52</option>
@@ -198,62 +174,6 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
         </div>
       </div>
     </div>
-
-    <style>
-  .phone-input {
-    display: flex;
-    gap: 5px;
-  }
-  select, input[type="tel"] {
-    flex: 1;
-  }
-</style>
-    <div class="testimonials">
-      <p>Estamos en los siguientes países:</p>
-      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-          <div style="text-align: center;">
-              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="Bandera de Estados Unidos" width="50"></a>
-              <p>Estados Unidos</p>
-          </div>
-          <div style="text-align: center;">
-              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg" alt="Bandera de Chile" width="50"></a>
-              <p>Chile</p>
-          </div>
-          <div style="text-align: center;">
-              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg" alt="Bandera de Perú" width="50"></a>
-              <p>Perú</p>
-          </div>
-          <div style="text-align: center;">
-              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" alt="Bandera de México" width="50"></a>
-              <p>México</p>
-          </div>
-          <div style="text-align: center;">
-              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg" alt="Bandera de Colombia" width="50"></a>
-              <p>Colombia</p>
-          </div>
-          <div style="text-align: center;">
-              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Bolivia.svg" alt="Bandera de Bolivia" width="50"></a>
-              <p>Bolivia</p>
-          </div>
-          <div style="text-align: center;">
-              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg" alt="Bandera de Ecuador" width="50"></a>
-              <p>Ecuador</p>
-          </div>
-          <div style="text-align: center;">
-              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Flag_of_Guatemala.svg" alt="Bandera de Guatemala" width="50"></a>
-              <p>Guatemala</p>
-          </div>
-          <div style="text-align: center;">
-              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Flag_of_El_Salvador.svg" alt="Bandera de El Salvador" width="50"></a>
-              <p>El Salvador</p>
-          </div>
-          <div style="text-align: center;">
-              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Flag_of_Panama.svg" alt="Bandera de Panamá" width="50"></a>
-              <p>Panamá</p>
-          </div>
-      </div>
-  </div>
-  </div>
 
   <script>
     document.getElementById('sendToEmail').addEventListener('click', function () {
