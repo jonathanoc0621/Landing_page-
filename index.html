@@ -102,12 +102,31 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       color: #1f2937;
     }
 
-    .form input {
-      width: calc(100% - 22px); /* Adjusted width to fit the container */
+    .form input,
+    .phone-input {
+      width: 100%;
       padding: 10px;
       margin-bottom: 15px;
       border: 1px solid #d1d5db;
       border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .phone-input {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .phone-input select {
+      width: auto;
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    .phone-input input {
+      flex-grow: 1;
+      padding: 10px;
       font-size: 1rem;
     }
 
@@ -137,33 +156,6 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       height: 30px;
       margin: 0 10px;
       opacity: 0.8;
-    }
-    
-    .phone-input {
-      display: flex;
-      align-items: center;
-      width: calc(100% - 22px); /* Adjusted width to fit the container */
-      border: 1px solid #d1d5db;
-      border-radius: 5px;
-    }
-
-    .phone-input select {
-      border: none;
-      margin-right: 10px;
-      padding: 10px;
-      max-width: 100px; /* Reduce the width of the select when closed */
-    }
-
-    .phone-input select option {
-      max-width: none; /* Ensure the options are full width */
-      padding: 5px; /* Ensure the options are fully visible */
-    }
-
-    .phone-input input {
-      border: none;
-      width: 100%;
-      padding: 10px;
-      text-align: left;
     }
   </style>
 </head>
@@ -268,7 +260,7 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       }
 
       // Construye el mensaje
-      const message = `Hola, mi nombre es ${name}, mi correo es ${email} y mi número de teléfono es ${countryCode} ${phone}. Me interesa la información del negocio.`;
+      const message = `Hola, mi nombre es ${name}, mi correo es ${email} y mi número de teléfono es ${countryCode} ${phone}. Me interesa la información de los productos.`;
 
       // Envía un mensaje de WhatsApp al número especificado
       const whatsappUrl = `https://wa.me/573244473967?text=${encodeURIComponent(message)}`;
@@ -278,8 +270,3 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
 </body>
 
 </html>
-
-
-</html>
-
-
