@@ -194,10 +194,20 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
             </select>
             <input type="tel" id="phone" placeholder="Ingresa tu número de teléfono" required>
           </div>
-          <button id="bybettycd@gmail.com">Enviar</button>
+          <button id="sendToEmail">Enviar</button>
         </div>
       </div>
     </div>
+
+    <style>
+  .phone-input {
+    display: flex;
+    gap: 5px;
+  }
+  select, input[type="tel"] {
+    flex: 1;
+  }
+</style>
     <div class="testimonials">
       <p>Estamos en los siguientes países:</p>
       <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
@@ -263,7 +273,7 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       const message = `Hola, mi nombre es ${name}, mi correo es ${email} y mi número de teléfono es ${countryCode} ${phone}. Me interesa la información de los productos.`;
 
       // Envia el correo
-      window.location.href = `mailto:info@saluddivina.com?subject=Información de Productos&body=${encodeURIComponent(message)}`;
+      window.location.href = `mailto:bybettycd@gmail.com?subject=Información de Productos&body=${encodeURIComponent(message)}`;
     });
   </script>
 </body>
