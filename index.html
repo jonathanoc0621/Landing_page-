@@ -173,51 +173,33 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
     <div class="logo">
       <img src="imagenes/Imagen de WhatsApp 2025-02-15 a las 10.14.16_75d202ec.jpg" style="height: 200px; width: 200px;" alt="Logo" >
     </div>
-    <div class="cta-section">
-  <div class="cta-container">
-    <div class="form">
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" placeholder="Ingresa tu nombre" required>
-      <label for="email">Correo electrónico:</label>    
-      <input type="email" id="email" placeholder="Ingresa tu correo" required>
-      <label for="phone">Número de teléfono:</label>
-      <div class="phone-input">
-        <select id="countryCode">
-          <option value="+1 Estados Unidos"+1</option>
-          <option value="+56 Panama"+56</option>
-          <option value="+51 Peru"+51</option>
-          <option value="+52 Mexico"+52</option>
-          <option value="+57 Colombia"+57</option>
-          <option value="+591 Bolivia"+591</option>
-          <option value="+593 Ecuador"+593</option>
-          <option value="+502 Guatemala"+502</option>
-          <option value="+503 El salvador"+503</option>
-          <option value="+507 Panama"+507</option>
-        </select>
-        <input type="tel" id="phone" placeholder="Ingresa tu número de teléfono" required>
+  <div class="cta-section">
+      <div class="cta-container">
+        <div class="form">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" placeholder="Ingresa tu nombre" required>
+          <label for="email">Correo electrónico:</label>    
+          <input type="email" id="email" placeholder="Ingresa tu correo" required>
+          <label for="phone">Número de teléfono:</label>
+          <div class="phone-input">
+            <select id="countryCode">
+              <option value="+1" data-flag="us">🇺🇸 +1</option>
+              <option value="+56" data-flag="cl">🇨🇱 +56</option>
+              <option value="+51" data-flag="pe">🇵🇪 +51</option>
+              <option value="+52" data-flag="mx">🇲🇽 +52</option>
+              <option value="+57" data-flag="co">🇨🇴 +57</option>
+              <option value="+591" data-flag="bo">🇧🇴 +591</option>
+              <option value="+593" data-flag="ec">🇪🇨 +593</option>
+              <option value="+502" data-flag="gt">🇬🇹 +502</option>
+              <option value="+503" data-flag="sv">🇸🇻 +503</option>
+              <option value="+507" data-flag="pa">🇵🇦 +507</option>
+            </select>
+            <input type="tel" id="phone" placeholder="Ingresa tu número de teléfono" required>
+          </div>
+          <button id="sendToWhatsApp">Enviar</button>
+        </div>
       </div>
-      <button id="sendToWhatsApp">Enviar</button>
     </div>
-  </div>
-</div>
-
-<style>
-  .phone-input {
-    display: flex;
-    align-items: center; /* Alinea verticalmente */
-  }
-
-  #countryCode {
-    border: none; /* Elimina el borde */
-    background: transparent; /* Fondo transparente */
-    margin-right: 10px; /* Espacio entre el select y el input */
-  }
-
-  #phone {
-    flex: 1; /* Permite que el input ocupe el espacio restante */
-  }
-</style>
-
 
     <div class="testimonials">
       <p>Nos encontraras en los siguientes países:</p>
