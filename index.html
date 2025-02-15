@@ -198,7 +198,7 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
         </select>
         <input type="tel" id="phone" placeholder="Ingresa tu número de teléfono" required>
       </div>
-      <button id="sendToEmail">Enviar</button>
+      <button id="sendToWhatsApp">Enviar</button>
     </div>
   </div>
 </div>
@@ -252,7 +252,7 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
   </div>
 
   <script>
-    document.getElementById('sendToEmail').addEventListener('click', function () {
+    document.getElementById('sendToWhatsApp').addEventListener('click', function () {
       // Obtén los datos del formulario
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
@@ -268,12 +268,15 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       // Construye el mensaje
       const message = `Hola, mi nombre es ${name}, mi correo es ${email} y mi número de teléfono es ${countryCode} ${phone}. Me interesa la información del negocio.`;
 
-      // Envía un mensaje de WhatsApp
-      const whatsappUrl = `https://wa.me/+573244473967${phone}?text=${encodeURIComponent(message)}`;
+      // Envía un mensaje de WhatsApp al número especificado
+      const whatsappUrl = `https://wa.me/573244473967?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
     });
   </script>
 </body>
+
+</html>
+
 
 </html>
 
