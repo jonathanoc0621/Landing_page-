@@ -151,6 +151,7 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       border: none;
       margin-right: 10px;
       padding: 0;
+      max-width: 150px; /* Reduce the width of the select */
     }
 
     .phone-input input {
@@ -261,13 +262,14 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       }
 
       // Construye el mensaje
-      const message = Hola, mi nombre es ${name}, mi correo es ${email} y mi número de teléfono es ${countryCode} ${phone}. Me interesa la información de los productos.;
+      const message = `Hola, mi nombre es ${name}, mi correo es ${email} y mi número de teléfono es ${countryCode} ${phone}. Me interesa la información de los productos.`;
 
       // Envia el correo
-      window.location.href = mailto:bybettycd@gmail.com?subject=Información de Productos&body=${encodeURIComponent(message)};
+      window.location.href = `mailto:bybettycd@gmail.com?subject=Información de Productos&body=${encodeURIComponent(message)}`;
     });
   </script>
 </body>
 
 </html>
+
 
