@@ -138,6 +138,26 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
       margin: 0 10px;
       opacity: 0.8;
     }
+    
+    .phone-input {
+      display: flex;
+      align-items: center;
+      border: 1px solid #d1d5db;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    .phone-input select {
+      border: none;
+      margin-right: 10px;
+      padding: 0;
+    }
+
+    .phone-input input {
+      border: none;
+      width: 100%;
+      padding: 0;
+    }
   </style>
 </head>
 
@@ -159,8 +179,8 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
           <label for="email">Correo electrónico:</label>
           <input type="email" id="email" placeholder="Ingresa tu correo" required>
           <label for="phone">Número de teléfono:</label>
-          <div style="display: flex; align-items: center;">
-            <select id="countryCode" style="margin-right: 10px; border: 1px solid #d1d5db; border-radius: 5px; padding: 10px;">
+          <div class="phone-input">
+            <select id="countryCode">
               <option value="+1">🇺🇸 +1</option>
               <option value="+56">🇨🇱 +56</option>
               <option value="+51">🇵🇪 +51</option>
@@ -249,4 +269,4 @@ src="https://www.facebook.com/tr?id=1320673155625730&ev=PageView&noscript=1"
 </body>
 
 </html>
-``` ▋
+
